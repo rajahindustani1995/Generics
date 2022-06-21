@@ -7,9 +7,9 @@
             int choice;
             do
             {
-                Console.WriteLine("\n1. Find maximum among three integers");
+                Console.WriteLine("\n1. Find maximum among Three Integers");
+                Console.WriteLine("2. Find maximum among Three Floats");
 
-                Console.WriteLine("0. Exit");
                 Console.Write("Enter your choice : ");
                 choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -17,14 +17,26 @@
                     case 1:
                         FindMaxNumber findMaxNumber = new FindMaxNumber();
 
-                        //Max Number in First position
+                        //TC1
                         Console.WriteLine("Maximum integer is : " + findMaxNumber.MaxNumberInt(8, 6, 5));
 
-                        //Max Number in Second position
+                        //TC@
                         Console.WriteLine("Maximum integer is : " + findMaxNumber.MaxNumberInt(6, 9, 7));
 
-                        //Max Number in Third position
+                        //TC3
                         Console.WriteLine("Maximum integer is : " + findMaxNumber.MaxNumberInt(5, 7, 8));
+                        break;
+                    case 2:
+                        FindMaxFloats findMaxFloats = new FindMaxFloats();
+
+                        //TC1
+                        Console.WriteLine("Maximum float number is : " + findMaxFloats.MaxNumberFloat(8.7f, 6.4f, 5.8f));
+
+                        //TC2
+                        Console.WriteLine("Maximum float number is : " + findMaxFloats.MaxNumberFloat(6.4f, 9.1f, 7.3f));
+
+                        //TC3
+                        Console.WriteLine("Maximum float number is : " + findMaxFloats.MaxNumberFloat(5.5f, 7.3f, 8.4f));
                         break;
                     default:
                         Console.WriteLine("Please enter correct option from the list");
