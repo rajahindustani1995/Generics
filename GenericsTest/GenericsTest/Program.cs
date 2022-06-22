@@ -11,6 +11,7 @@
                 Console.WriteLine("2. Find maximum among Three Floats Values");
                 Console.WriteLine("2. Find maximum among Three String Values");
                 Console.WriteLine("4. Find maximum among Int, Float, and String using Generic Method");
+                Console.WriteLine("5. Find maximum among Int, Float, and String using Generic Class");
 
                 Console.Write("Enter your choice : ");
                 choice = Convert.ToInt32(Console.ReadLine());
@@ -70,6 +71,19 @@
                         Console.WriteLine("Maximum string is : " + genericMethod.MaxAmongThree("8", "6", "5"));
                         Console.WriteLine("Maximum string is : " + genericMethod.MaxAmongThree("6", "9", "7"));
                         Console.WriteLine("Maximum string is : " + genericMethod.MaxAmongThree("5", "7", "8"));
+                        break;
+                    case 5:
+                        
+                        MaxGenericClass<int> maxInt = new MaxGenericClass<int>(5, 4, 8);
+                        Console.WriteLine("Maximum integer is : " + maxInt.TestMaximum());
+
+                        
+                        MaxGenericClass<float> maxFloat = new MaxGenericClass<float>(6.4f, 5.1f, 9.7f);
+                        Console.WriteLine("Maximum float is : " + maxFloat.TestMaximum());
+
+                        
+                        MaxGenericClass<string> maxString = new MaxGenericClass<string>("x", "xy", "xyz");
+                        Console.WriteLine("Maximum string is : " + maxString.TestMaximum());
                         break;
                     default:
                         Console.WriteLine("Please enter correct option from the list");
